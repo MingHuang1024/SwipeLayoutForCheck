@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!--    <com.b2bwings.framework.customview.SwipeLayout2 xmlns:android="http://schemas.android.com/apk/res/android"-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50px"
+        android:text="滑动验证组件"
+        android:textSize="30sp" />
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="键盘弹出或关闭时会导致滑块从右边回到左边，已修复"
+        android:text="" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重置" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="100px">
+
+        <TextView
+            android:id="@+id/textView98"
+            android:layout_width="984px"
+            android:layout_height="0px"
+            android:background="@drawable/login_verify_text_bg"
+            android:gravity="center"
+            android:paddingLeft="160px"
+            android:text="请按住滑块，拖动到最右边"
+            android:textColor="#ffc0c5cc"
+            android:textSize="36px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.example.swipelayoutforcheck.SwipeLayout2
+            android:id="@+id/swipeLayout"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvOk"
+                android:layout_width="824px"
+                android:layout_height="match_parent"
+                android:background="#62C76A"
+                android:gravity="center"
+                android:text="验证成功"
+                android:textColor="#ffffff"
+                android:textSize="36px"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="984px"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:paddingRight="824px"
+                android:scaleType="fitXY"
+                android:src="@drawable/login_swipe" />
+
+        </com.example.swipelayoutforcheck.SwipeLayout2>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
